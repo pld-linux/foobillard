@@ -19,7 +19,6 @@ BuildRequires:	gettext-devel
 BuildRequires:	intltool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 FooBillard is an attempt to create a free OpenGL-billard for Linux.
