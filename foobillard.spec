@@ -67,11 +67,11 @@ X_LIBS='-I/usr/X11R6/include'; export X_LIBS
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games,%{_pixmapsdir}}
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
-install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
