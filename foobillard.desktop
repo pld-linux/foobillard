@@ -7,5 +7,5 @@ Exec=foobillard
 Icon=foobillard.xpm
 Terminal=false
 Type=Application
-Categories=Application;Game;SportsGame;
+Categories=Application;Game;ArcadeGame;
 # vi: encoding=utf-8
