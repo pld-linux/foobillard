@@ -57,7 +57,8 @@ X_LIBS='-I/usr/X11R6/include'; export X_LIBS
 %{__autoconf}
 %{__automake}
 %configure \
-	%{!?_with_glut:--enable-SDL}%{?_with_glut:--enable-glut}
+	%{!?_with_glut:--enable-SDL}%{?_with_glut:--enable-glut} \
+	--disable-nvidia
 
 %{__make}
 
