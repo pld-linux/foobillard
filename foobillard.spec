@@ -8,6 +8,7 @@ License:	GPL
 URL:		http://foobillard.sunsite.dk/
 Source0:	http://foobillard.sunsite.dk/dnl/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
+Source2:	%{name}.xpm
 Patch0:		%{name}-include.patch
 BuildRequires:	automake
 BuildRequires:	autoconf
@@ -47,8 +48,11 @@ export X_LIBS='-I%{_includedir}'
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_applnkdir}/Games
+install -d $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}/
 %{__make} DESTDIR=%{buildroot} install
+
 
 %clean
 rm -rf %{buildroot}
@@ -59,3 +63,4 @@ rm -rf %{buildroot}
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/foobillard/*
 %{_applnkdir}/Games/%{name}.desktop
+%{_pixmapsdir}/*
