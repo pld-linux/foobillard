@@ -1,0 +1,12 @@
+diff -Nur foobillard-2.3.orig/src/Makefile.am foobillard-2.3/src/Makefile.am
+--- foobillard-2.3.orig/src/Makefile.am	Mon Dec 16 19:40:45 2002
++++ foobillard-2.3/src/Makefile.am	Wed Jan  8 14:13:14 2003
+@@ -67,7 +67,7 @@
+ BUMPREF_CFLAGS = -DNO_NV_BUMPREF
+ endif
+ 
+-CFLAGS = -Wall -O3 `freetype-config --cflags` ${SDL_CFLAGS} ${BUMPREF_CFLAGS}
++CFLAGS = -Wall -O3 -I/usr/X11R6/include `freetype-config --cflags` ${SDL_CFLAGS} ${BUMPREF_CFLAGS}
+ 
+ #LIBS   = -L$(LIBDIR) -lglut -lGLU -lGL -lXext -lXaw -lm -lXi -lpng -lz
+ #LIBS   = -L$(LIBDIR) -lglut -lGLU -lGL -lXext -lXaw -lm -lXi -lpng -lz
