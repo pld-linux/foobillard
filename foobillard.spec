@@ -7,7 +7,7 @@ Summary:	A free OpenGL game of playing billard
 Summary(pl):	Wolnodostêpna gra w bilard oparta na OpenGL
 Name:		foobillard
 Version:	2.9
-Release:	1
+Release:	2
 Vendor:		Florian Berger <florian.berger@aec.at>, <harpin_floh@yahoo.de>
 License:	GPL
 Group:		X11/Applications/Games
@@ -68,12 +68,12 @@ X_LIBS='-I/usr/X11R6/include'; export X_LIBS
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
@@ -84,5 +84,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS NEWS README ChangeLog TODO README.FONTS foobillardrc.example
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/foobillard
-%{_applnkdir}/Games/%{name}.desktop
+%{_desktopdir}/%{name}.desktop
 %{_pixmapsdir}/*
