@@ -6,7 +6,6 @@ Comment[pl]=Bilard oparty o biblioteke OpenGL
 Exec=foobillard
 Icon=foobillard.xpm
 Terminal=false
-MultipleArgs=false
 Type=Application
 Categories=Application;Game;SportsGame;
 # vi: encoding=utf-8
