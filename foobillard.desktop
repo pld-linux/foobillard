@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=FooBillard
+Comment=OpenGL billard game
+Comment[pl]=Bilard oparty o biblioteke OpenGL
+Exec=foobillard
+Icon=foobillard.xpm
+Terminal=false
+MultipleArgs=false
+Type=Application
+# vi: encoding=utf-8
