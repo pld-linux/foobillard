@@ -7,7 +7,7 @@ Summary(pl):	Wolnodostêpna gra w bilard oparta na OpenGL
 Name:		foobillard
 Version:	2.3
 Release:	2
-Vendor:		Florian Berger (florian.berger@aec.at,harpin_floh@yahoo.de)
+Vendor:		Florian Berger <florian.berger@aec.at>, <harpin_floh@yahoo.de>
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://foobillard.sunsite.dk/dnl/%{name}-%{version}.tar.gz
