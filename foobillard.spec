@@ -1,8 +1,12 @@
+#
+# Conditional build:
+# _with_glut	use glut instead of SDL-lib
+
 Summary:	A free OpenGL game of playing billard
 Summary(pl):	Wolnodostêpna gra w bilard oparta na OpenGL
 Name:		foobillard
 Version:	2.3
-Release:	1
+Release:	2
 Vendor:		Florian Berger (florian.berger@aec.at,harpin_floh@yahoo.de)
 License:	GPL
 Group:		X11/Applications/Games
@@ -11,14 +15,14 @@ Source1:	%{name}.desktop
 Source2:	%{name}.xpm
 Patch0:		%{name}-include.patch
 URL:		http://foobillard.sunsite.dk/
-BuildRequires:	SDL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	freetype-devel
-BuildRequires:	gettext-devel
 BuildRequires:	intltool
+%{?_with_glut:BuildRequires:	glut-devel}
+%{?_with_glut:BuildRequires:	OpenGL-devel}
+%{!?_with_glut:BuildRequires:	SDL-devel}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 FooBillard is an attempt to create a free OpenGL-billard for Linux.
@@ -47,11 +51,11 @@ nieco ró¿niæ od rzeczywisto¶ci.
 rm -f missing
 X_LIBS='-I/usr/X11R6/include'; export X_LIBS
 %{__libtoolize}
-%{__gettextize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure --enable-SDL
+%configure \
+	%{!?_with_glut:--enable-SDL}%{?_with_glut:--enable-glut}
 
 %{__make}
 
