@@ -1,8 +1,8 @@
 #
 # Conditional build:
 %bcond_with	glut	# use glut instead of SDL
-%bcond_with nvidia # enable NVidia specific extensions
-
+%bcond_with	nvidia	# enable NVidia specific extensions
+#
 Summary:	A free OpenGL game of playing billard
 Summary(pl):	Wolnodostêpna gra w bilard oparta na OpenGL
 Name:		foobillard
@@ -24,6 +24,7 @@ BuildRequires:	automake
 BuildRequires:	freetype-devel
 %{?with_glut:BuildRequires:	glut-devel}
 BuildRequires:	intltool
+BuildRequires:	libtool
 Requires:	OpenGL
 %{?with_nvidia:Requires:	XFree86-driver-nvidia}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
