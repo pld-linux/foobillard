@@ -1,24 +1,23 @@
-Summary:   A free OpenGL game of playing billard.
-Name:      foobillard
-Version:	 2.3
-Release:	 1
-Group:		 X11/Applications/Games
-Vendor:		 Florian Berger (florian.berger@aec.at,harpin_floh@yahoo.de)
-License:	 GPL
-URL:		   http://foobillard.sunsite.dk/
-Source0:	 http://foobillard.sunsite.dk/dnl/%{name}-%{version}.tar.gz
-Source1:	 %{name}.desktop
-Patch0:		 %{name}-include.patch
+Summary:	A free OpenGL game of playing billard.
+Name:		foobillard
+Version:	2.3
+Release:	1
+Group:		X11/Applications/Games
+Vendor:		Florian Berger (florian.berger@aec.at,harpin_floh@yahoo.de)
+License:	GPL
+URL:		http://foobillard.sunsite.dk/
+Source0:	http://foobillard.sunsite.dk/dnl/%{name}-%{version}.tar.gz
+Source1:	%{name}.desktop
+Patch0:		%{name}-include.patch
 BuildRequires:	automake
 BuildRequires:	autoconf
 BuildRequires:	gettext-devel
 BuildRequires:	intltool
 BuildRequires:	SDL-devel
 BuildRequires:	freetype-devel
-BuildRoot: %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
-%define		_applnkdir	%{_datadir}/applnk
 
 %description
 FooBillard is an attempt to create a free OpenGL-billard for Linux.
