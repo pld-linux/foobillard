@@ -18,12 +18,14 @@ Source2:	%{name}.xpm
 URL:		http://foobillard.sunsite.dk/
 BuildRequires:	OpenGL-devel
 %{!?with_glut:BuildRequires:	SDL-devel}
+%{?with_nvidia:BuildRequires:	XFree86-driver-nvidia}
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	freetype-devel
 %{?with_glut:BuildRequires:	glut-devel}
 BuildRequires:	intltool
 Requires:	OpenGL
+%{?with_nvidia:Requires:	XFree86-driver-nvidia}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreqdep	libGL.so.1 libGLU.so.1
