@@ -18,7 +18,7 @@ Source2:	%{name}.xpm
 URL:		http://foobillard.sunsite.dk/
 BuildRequires:	OpenGL-devel
 %{!?with_glut:BuildRequires:	SDL-devel}
-%{?with_nvidia:BuildRequires:	XFree86-driver-nvidia}
+%{?with_nvidia:BuildRequires:	X11-driver-nvidia-devel}
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	freetype-devel
@@ -26,7 +26,7 @@ BuildRequires:	freetype-devel
 BuildRequires:	intltool
 BuildRequires:	libtool
 Requires:	OpenGL
-%{?with_nvidia:Requires:	XFree86-driver-nvidia}
+%{?with_nvidia:Requires:	X11-driver-nvidia}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreqdep	libGL.so.1 libGLU.so.1
@@ -61,8 +61,15 @@ X_LIBS='-I/usr/X11R6/include'; export X_LIBS
 %{__autoconf}
 %{__automake}
 %configure \
-	%{!?with_glut:--enable-SDL}%{?with_glut:--enable-glut} \
-	%{!?with_nvidia:--disable-nvidia}%{?with_nvidia:--enable-nvidia}
+%if %{with glut}
+	--enable-glut \
+	--disable-SDL \
+%else
+	--disable-glut \
+	--enable-SDL \
+%endif
+	--%{?with_nvidia:en}%{!?with_nvidia:dis}able-nvidia \
+	--enable-sound
 
 %{__make}
 
