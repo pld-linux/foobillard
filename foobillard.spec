@@ -5,16 +5,15 @@
 Summary:	A free OpenGL game of playing billard
 Summary(pl):	Wolnodostêpna gra w bilard oparta na OpenGL
 Name:		foobillard
-Version:	2.5
+Version:	2.8
 Release:	1
 Vendor:		Florian Berger <florian.berger@aec.at>, <harpin_floh@yahoo.de>
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://foobillard.sunsite.dk/dnl/%{name}-%{version}.tar.gz
-# Source0-md5:	63fd9e1a1d70324da9228b9d43a4e602
+# Source0-md5:	afe2e096743cbf41e0a9537cceb7f857
 Source1:	%{name}.desktop
 Source2:	%{name}.xpm
-Patch0:		%{name}-include.patch
 URL:		http://foobillard.sunsite.dk/
 BuildRequires:	OpenGL-devel
 %{!?_with_glut:BuildRequires:	SDL-devel}
@@ -49,7 +48,6 @@ nieco ró¿niæ od rzeczywisto¶ci.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 rm -f missing
