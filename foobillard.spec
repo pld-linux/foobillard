@@ -11,6 +11,7 @@ Vendor:		Florian Berger <florian.berger@aec.at>, <harpin_floh@yahoo.de>
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://foobillard.sunsite.dk/dnl/%{name}-%{version}.tar.gz
+# Source0-md5:	63fd9e1a1d70324da9228b9d43a4e602
 Source1:	%{name}.desktop
 Source2:	%{name}.xpm
 Patch0:		%{name}-include.patch
