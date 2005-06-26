@@ -24,6 +24,7 @@ BuildRequires:	automake
 BuildRequires:	freetype-devel
 %{?with_glut:BuildRequires:	glut-devel}
 BuildRequires:	intltool
+BuildRequires:	libpng-devel
 BuildRequires:	libtool
 Requires:	OpenGL
 %{?with_nvidia:Requires:	X11-driver-nvidia}
