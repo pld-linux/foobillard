@@ -7,7 +7,7 @@ Summary:	A free OpenGL game of playing billard
 Summary(pl):	Wolnodostêpna gra w bilard oparta na OpenGL
 Name:		foobillard
 Version:	3.0a
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://foobillard.sunsite.dk/dnl/%{name}-%{version}.tar.gz
@@ -17,7 +17,7 @@ Source2:	%{name}.xpm
 URL:		http://foobillard.sunsite.dk/
 BuildRequires:	OpenGL-devel
 %{!?with_glut:BuildRequires:	SDL-devel}
-%{?with_nvidia:BuildRequires:	X11-driver-nvidia-devel}
+%{?with_nvidia:BuildRequires:	xorg-driver-video-nvidia-devel}
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	freetype-devel
@@ -25,8 +25,10 @@ BuildRequires:	freetype-devel
 BuildRequires:	intltool
 BuildRequires:	libpng-devel
 BuildRequires:	libtool
+BuildRequires:	xorg-lib-libXaw-devel
+BuildRequires:	xorg-lib-libXi-devel
 Requires:	OpenGL
-%{?with_nvidia:Requires:	X11-driver-nvidia}
+%{?with_nvidia:Requires:	xorg-driver-video-nvidia}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreqdep	libGL.so.1 libGLU.so.1
