@@ -4,7 +4,7 @@
 %bcond_with	nvidia	# enable NVidia specific extensions
 #
 Summary:	A free OpenGL game of playing billard
-Summary(pl):	Wolnodostêpna gra w bilard oparta na OpenGL
+Summary(pl.UTF-8):   WolnodostÄ™pna gra w bilard oparta na OpenGL
 Name:		foobillard
 Version:	3.0a
 Release:	2
@@ -42,15 +42,15 @@ the main physics is implemented. If you are a billard-pro and you're
 missing some physics, please tell me. Cause I've implemented it like I
 think it should work, which might differ from reality.
 
-%description -l pl
-FooBillard to próba stworzenia wolnodostêpnego bilarda OpenGL dla
-Linuksa. Dlaczego foo? Bo autor mia³ ju¿ to logo (F.B. - Florian
-Berger) i "foo" brzmi trochê jak "pool" (a nazwa "FoolBillard" nie
-brzmia³a zbyt przyci±gaj±co). FooBillard jest nadal w stadium rozwoju,
-ale g³ówna fizyka jest ju¿ zaimplementowana. Je¿eli w grze brakuje
-jakiej¶ fizyki, dobrze jest zg³osiæ to autorowi, poniewa¿ on
-zaimplementowa³ j± tak, jak my¶la³, ¿e powinna dzia³aæ, co mo¿e siê
-nieco ró¿niæ od rzeczywisto¶ci.
+%description -l pl.UTF-8
+FooBillard to prÃ³ba stworzenia wolnodostÄ™pnego bilarda OpenGL dla
+Linuksa. Dlaczego foo? Bo autor miaÅ‚ juÅ¼ to logo (F.B. - Florian
+Berger) i "foo" brzmi trochÄ™ jak "pool" (a nazwa "FoolBillard" nie
+brzmiaÅ‚a zbyt przyciÄ…gajÄ…co). FooBillard jest nadal w stadium rozwoju,
+ale gÅ‚Ã³wna fizyka jest juÅ¼ zaimplementowana. JeÅ¼eli w grze brakuje
+jakiejÅ› fizyki, dobrze jest zgÅ‚osiÄ‡ to autorowi, poniewaÅ¼ on
+zaimplementowaÅ‚ jÄ… tak, jak myÅ›laÅ‚, Å¼e powinna dziaÅ‚aÄ‡, co moÅ¼e siÄ™
+nieco rÃ³Å¼niÄ‡ od rzeczywistoÅ›ci.
 
 %prep
 %setup -q
