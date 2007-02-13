@@ -4,7 +4,7 @@
 %bcond_with	nvidia	# enable NVidia specific extensions
 #
 Summary:	A free OpenGL game of playing billard
-Summary(pl.UTF-8):   Wolnodostępna gra w bilard oparta na OpenGL
+Summary(pl.UTF-8):	Wolnodostępna gra w bilard oparta na OpenGL
 Name:		foobillard
 Version:	3.0a
 Release:	2
