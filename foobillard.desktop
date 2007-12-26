@@ -1,10 +1,9 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=FooBillard
 Comment=OpenGL billard game
 Comment[pl]=Bilard oparty o biblioteke OpenGL
 Exec=foobillard
-Icon=foobillard.xpm
+Icon=foobillard
 Terminal=false
 Type=Application
 Categories=Game;ArcadeGame;
