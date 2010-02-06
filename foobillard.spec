@@ -15,9 +15,8 @@ Source0:	http://foobillard.sunsite.dk/dnl/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.xpm
 URL:		http://foobillard.sunsite.dk/
-BuildRequires:	OpenGL-devel
+BuildRequires:	OpenGL-GLU-devel
 %{!?with_glut:BuildRequires:	SDL-devel}
-%{?with_nvidia:BuildRequires:	xorg-driver-video-nvidia-devel}
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	freetype-devel
@@ -25,6 +24,7 @@ BuildRequires:	freetype-devel
 BuildRequires:	intltool
 BuildRequires:	libpng-devel
 BuildRequires:	libtool
+%{?with_nvidia:BuildRequires:	xorg-driver-video-nvidia-devel}
 BuildRequires:	xorg-lib-libXaw-devel
 BuildRequires:	xorg-lib-libXi-devel
 Requires:	OpenGL
